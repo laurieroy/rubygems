@@ -4,7 +4,7 @@ This is a [code along](https://www.udemy.com/course/ruby-on-rails-6-learn-20-gem
 
 It includes several gems I've used on other projects that I wanted to understand better.
 
-[Try the Demo!]() It's hosted on Heroku so it might take a few seconds to spin up.
+[Try the Demo!](https://laurie-rubygems.herokuapp.com/ ) It's hosted on Heroku so it might take a few seconds to spin up.
 
 Rails 6.1.3.1 | 
 ruby 2.7.2 | 
