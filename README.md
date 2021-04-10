@@ -9,4 +9,6 @@ It includes several gems I've used on other projects that I wanted to understand
 Rails 6.1.3.1 | 
 ruby 2.7.2 | 
 PG | 
+BS 4.6 | 
 
+This is my first project using HAML.
