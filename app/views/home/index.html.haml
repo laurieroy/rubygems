@@ -24,6 +24,15 @@
       %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
 
-%h1 StaticPages#privacy_policy
-=link_to "home", root_path
-%p Find me in app/views/static_pages/privacy_policy.html.haml
+%h1
+  You're Home!
+
+.fa.fa-flag
+.fab.fa-github
+
+= link_to root_path do
+  .fa.fa-home
+
+= link_to courses_path, class: 'btn btn-success' do
+  .fa.fa-book
+  Course
