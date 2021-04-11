@@ -44,5 +44,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'faker'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'simple_form', '~> 5.1'

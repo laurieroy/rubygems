@@ -11,4 +11,10 @@ ruby 2.7.2 |
 PG | 
 BS 4.6 | 
 
+Gems Used:
+Action Text / Trix
+Haml-rails
+Faker
+Simple_form
+
 This is my first project using HAML.
