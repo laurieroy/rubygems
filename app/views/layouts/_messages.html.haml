@@ -1,2 +1,23 @@
-%p.notice= notice
-%p.alert= alert
+-# - unless flash.empty?
+-#   :javascript
+-#     <haml_silent>     flash.each do |f| 
+-#     </haml_silent><haml_block><haml_silent>         type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') 
+-#     </haml_silent>        toastr['#{type}']('#{f[1]}', '', {"closeButton": true,
+-#                                                       "positionClass": "toast-top-center", 
+-#                                                       "onclick": null, 
+-#                                                       "showDuration": "300", 
+-#                                                       "hideDuration": "1000", 
+-#                                                       "timeOut": "5000", 
+-#                                                       "extendedTimeOut": "1000", 
+-#                                                       "showEasing": "swing", 
+-#                                                       "hideEasing": "linear", 
+-#                                                       "showMethod": "fadeIn", 
+-#                                                       "progressBar": true,
+-#                                                       "hideMethod": "fadeOut" });
+-#     </haml_block>
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{:class => "alert alert-#{name.to_s == 'notice' ? 'success' : 'danger'}", :role => "alert"}
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+      = content_tag :div, msg, :id => "flash_#{name}"
