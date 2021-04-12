@@ -12,9 +12,13 @@ PG |
 BS 4.6 | 
 
 Gems Used:
-Action Text / Trix
-Haml-rails
-Faker
-Simple_form
+
+Action Text / Trix | 
+Bootstrap / Popper / jQuery | 
+Devise | 
+Faker | 
+Friendly_id | 
+Haml-rails | 
+Simple_form | 
 
 This is my first project using HAML.
