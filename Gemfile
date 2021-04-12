@@ -46,5 +46,6 @@ end
 
 gem 'devise'
 gem 'faker'
+gem 'friendly_id', '~> 5.4'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'simple_form', '~> 5.1'
