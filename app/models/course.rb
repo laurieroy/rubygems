@@ -13,6 +13,16 @@ class Course < ApplicationRecord
 	extend FriendlyId
 	friendly_id :title, use: :slugged
 
+	LANGUAGES = ["English", "Spanish", "French"]
+	def self.languages
+		LANGUAGES.map { |language| [language, language] }
+	end
+	
+	LEVELS = ["Beginner", "Intermediate", "Advanced"]
+	def self.levels
+		LEVELS.map { |level| [level, level] }
+	end
+
 	# friendly_id :generated_slug, use: :slugged
 	# def generated_slug
 	# 	require 'securerandom'
