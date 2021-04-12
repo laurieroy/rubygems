@@ -1,0 +1,22 @@
+%hr
+%footer
+	.container
+		.row
+			.col-md-4
+				%span.text-muted
+					Copyright © 
+					= Time.now.year 
+					#{link_to "Laurie Roy",  "https://laurieroy.github.io", class: "text-white"}
+				.row
+					.fa.fa-envelope 
+					= mail_to 'laurieroy.dev@gmail.com'
+					.row
+			.col-md-4
+				Privacy policy
+				.row
+				Terms and conditions
+			.col-md-4
+				About us
+				.row
+				= link_to 'Teach on Rubygems', new_course_path
+%br 
