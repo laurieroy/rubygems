@@ -11,23 +11,23 @@
 		= time_ago_in_words(user.created_at)
 		ago
 	.card-footer
-		= 'sign_in_count'.humanize
+		%b= 'sign_in_count'.humanize
 		\: 
 		= user.sign_in_count
 		.row
-		= 'current_sign_in_at'.humanize
+		%b= 'current_sign_in_at'.humanize
 		\: 
 		= user.current_sign_in_at
 		.row
-		= 'last_sign_in_at'.humanize
+		%b= 'last_sign_in_at'.humanize
 		\: 
 		= user.last_sign_in_at
 		.row
-		= 'current_sign_in_ip'.humanize
+		%b= 'current_sign_in_ip'.humanize
 		\: 
 		= user.current_sign_in_ip
 		.row
-		= 'last_sign_in_ip'.humanize
+		%b= 'last_sign_in_ip'.humanize
 		\: 
 		= user.last_sign_in_ip
 	.card-footer
@@ -39,7 +39,12 @@
 	-# 	.row
 	-# 	.fa.fa-chalkboard-teacher
 	-# 	= user.user
-	-# .card-footer
+	.card-footer
+		- user.roles.each do |role|
+			.badge.badge-info
+			= role.name
+		-  if policy(user).edit?
+			= link_to 'Edit roles', edit_user_path(user), class: 'btn btn-sm btn-warning'
 	-# 	%td= link_to 'Show', user, class: 'btn btn-sm btn-primary'
 	-# 	%td= link_to 'Edit', edit_user_path(user), class: 'btn btn-sm btn-warning'
 	-# 	%td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
